@@ -19,3 +19,8 @@
 - [React Hook：state Hook 使用 useState](http://www.ptbird.cn/react-hook-use-state-hook.html)
 
 - [React 几个基本的 Hook 一览及自定义 Hook](http://www.ptbird.cn/react-hooks-at-a-glance.html)
+
+
+效果：
+
+![http://static.ptbird.cn/usr/uploads/2018/12/1835149717.gif](http://static.ptbird.cn/usr/uploads/2018/12/1835149717.gif)
