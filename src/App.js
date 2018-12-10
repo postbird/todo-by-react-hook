@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Form from './components/Form';
+import Item from './components/Item';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      list:[{
+        computed: false,
+        val: '初始化内容'
+      }]
+    }
+  }
+  addHandle = (val) => {
+    this.setState({
+      list: [{computed: false,val}].concat(this.state.list)
+    });
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Form add={this.addHandle}/>
+        <div className={'list'}>
+          {
+            this.state.list.map((item, index) => {
+              return <Item item={item} key={index} ></Item>
+            })
+          }
+        </div>
       </div>
     );
   }
